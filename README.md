@@ -24,7 +24,8 @@ import Form from 'form-father';
 Form.setDefaultParams({
 	showLoaderButton: false,
 	scrollToFirstErroredInput: false,
-	logging: true,
+	logging: false,
+	loaderColor: 'currentColor',
 });
 
 const formElement = document.querySelector('#myForm');
@@ -34,6 +35,7 @@ const options = {
 	},
 	onResponse: (responseBody, formInstance) => {
 		// Действия при получении ответа от сервера
+		formInstance.clearInputs();
 	},
 	// Другие опции...
 };
