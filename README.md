@@ -18,6 +18,23 @@ npm install form-father
 
 ## Использование
 
+```html
+	<form
+		novalidate
+		onsubmit="return false"
+		method="post"
+		action="/callback.php"
+		enctype="multipart/form-data"
+	>
+
+		<!-- inputs -->
+
+		<button type="submit">
+			Отправить
+		</button>
+	</form>
+```
+
 ```javascript
 import Form from 'form-father';
 
